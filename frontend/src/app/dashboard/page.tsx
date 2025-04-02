@@ -234,8 +234,7 @@ export default function DashboardPage() {
                                     X/Twitter
                                 </a>
                                 <a
-                                    href="https://instagram.com/flintfuel"git remote add origin https://github.com/yourusername/flint.git
-
+                                    href="https://instagram.com/flintfuel"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:opacity-90 text-white px-4 py-2 rounded-xl text-sm flex items-center gap-2 transition"
