@@ -1,8 +1,8 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Mona_Sans } from 'next/font/google'
 import { Toaster } from '@/components/ui/sonner'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import AnimatedBackground from '@/components/AnimateBackground'
 
 const monaSans = Mona_Sans({
     subsets: ['latin'],
@@ -21,7 +21,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body className="bg-background text-foreground dark:text-white transition-colors">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative min-h-screen w-full overflow-x-hidden">
-                {children}
+                {/* 🔮 Background effect */}
+                <AnimatedBackground />
+
+                {/* 🧱 Actual page content */}
+                <div className="relative z-10">
+                    {children}
+                </div>
             </div>
 
             <Toaster richColors closeButton />
