@@ -27,8 +27,8 @@ export default function Navbar({ showLogin = false }: NavbarProps) {
     return (
         <nav className="w-full border-b px-4 py-3 flex justify-between items-center bg-background text-foreground transition-colors">
             <Link href="/" className="flex items-center gap-2 font-semibold text-lg">
-                <img src="/logo.png" alt="Flint" className="h-7 w-auto" />
-                Flint
+                <img src="/logo.png" alt="GetStrong" className="h-7 w-auto" />
+                GetStrong
             </Link>
 
             <div className="flex items-center gap-2">

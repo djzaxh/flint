@@ -36,7 +36,7 @@ export default function WaitlistForm() {
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mt-6">
             <Input
                 type="email"
-                placeholder="you@email.com"
+                placeholder="you@example.com"
                 className="w-full"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
