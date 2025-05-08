@@ -46,6 +46,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { format } from "date-fns";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface BlogPost {
   slug: string;
@@ -544,9 +546,9 @@ date: ${editDate}
                   <h1>{editTitle}</h1>
                   <p className="text-muted-foreground">{editExcerpt}</p>
                   <div className="mt-4">
-                    {editContent.split("\n").map((line, i) => (
-                      <p key={i}>{line}</p>
-                    ))}
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {editContent}
+                    </ReactMarkdown>
                   </div>
                 </div>
               ) : (
