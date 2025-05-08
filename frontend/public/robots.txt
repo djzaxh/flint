@@ -1,0 +1,19 @@
+# https://getstrong.ai robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://getstrong.ai/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Allow Google to index everything
+User-agent: Googlebot
+Allow: /
+
+# Allow Bing to index everything
+User-agent: Bingbot
+Allow: /

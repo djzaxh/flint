@@ -13,7 +13,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { AvatarUpload } from "@/components/ui/avatar-upload";
 import { toast } from "sonner";
 
 export default function SignupPage() {

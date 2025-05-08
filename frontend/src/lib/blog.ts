@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
 
 const blogDirectory = path.join(process.cwd(), 'src/content/blog')
 
@@ -32,7 +33,10 @@ export async function getBlogPost(slug: string) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
     const { data, content } = matter(fileContents)
-    const processedContent = await remark().use(html).process(content)
+    const processedContent = await remark()
+        .use(remarkGfm) // Adds support for GitHub Flavored Markdown
+        .use(html, { sanitize: false }) // Don't sanitize to allow all HTML elements
+        .process(content)
     const contentHtml = processedContent.toString()
 
     return {
